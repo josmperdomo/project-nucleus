@@ -1,222 +1,783 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nucleus - eWallet</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Nucleus | Billetera Digital & Pagos Globales</title>
+  <meta name="description" content="Nucleus es la billetera digital inteligente para recibir y realizar pagos desde tu celular. Transferencias inmediatas, tarjetas virtuales seguras y comisiones transparentes." />
+  <meta name="keywords" content="nucleus, ewallet, billetera digital, pagos moviles, fintech, transferencias internacionales, tarjetas virtuales" />
+  <meta name="author" content="Jose Manuel Perdomo" />
 
-    <link rel="stylesheet" href="assets/css/normalize.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__contenedor">
-        <div class="header__barra">
-          <div class="header__logo">
-            <img src="assets/img/logo.svg" alt="logo nucleus" />
-          </div>
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-          <nav class="navegacion">
-            <a href="#" class="navegacion__link">¿Que es?</a>
-            <a href="#" class="navegacion__link">¿Como funciona?</a>
-            <a href="#" class="navegacion__link">Precios</a>
-            <a href="#" class="navegacion__link">Contratar</a>
-          </nav>
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/normalize.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="header-wrapper">
+    <nav class="navbar" id="navbar">
+      <div class="container nav__container">
+        <a href="#inicio" class="nav__logo" aria-label="Nucleus Inicio">
+          <img src="assets/img/logo.svg" alt="Logo Nucleus" width="140" height="38" />
+        </a>
+
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="#que-es" class="nav__link">¿Qué es?</a></li>
+          <li><a href="#seguridad" class="nav__link">Seguridad</a></li>
+          <li><a href="#comisiones" class="nav__link">Comisiones</a></li>
+          <li><a href="#planes" class="nav__link">Planes</a></li>
+          <li><a href="#testimoniales" class="nav__link">Testimonios</a></li>
+          <li><a href="#faq" class="nav__link">FAQ</a></li>
+          <li class="nav__actions--mobile" style="width: 100%; margin-top: 1rem;">
+            <a href="#registro" class="btn btn--primary btn--block" data-open-modal="signup">Abrir Cuenta</a>
+          </li>
+        </ul>
+
+        <div class="nav__actions nav__actions--desktop">
+          <a href="#registro" class="btn btn--ghost btn--sm" data-open-modal="signup">Iniciar Sesión</a>
+          <a href="#registro" class="btn btn--primary btn--sm" data-open-modal="signup">Abrir Cuenta</a>
         </div>
 
-        <div class="header__grid">
-          <div class="header__texto">
-            <h1 class="header__heading">
-              Recibe y Realiza pago en tu celular con nucleus
-            </h1>
-            <a href="#" class="header__boton">Obtener Cuenta</a>
-          </div>
-          <div class="header__grafico">
-            <img
-              src="assets/img/app_1.svg"
-              alt="Imagen nucleus app"
-              class="header__imagen"
-            />
-          </div>
-        </div>
+        <button class="nav__toggle" id="mobileMenuToggle" aria-label="Abrir menú" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
-    </header>
-    <main class="nucleus">
-      <h2 class="nucleus__heading">¿Que es?</h2>
-      <div class="nucleus__contenedor">
-        <div class="nucleus__grid">
-          <div class="nucleus__imagen">
-            <img src="assets/img/app_2.svg" alt="app nucleus" />
-          </div>
-          <div class="listado">
-            <div class="listado__elemento">
-              <h2 class="listado__heading">Facil</h2>
-              <p class="listado__texto">
-                Crear una cuenta, envia tu documentacion y comienza a utilizar
-                nucleus en un par de horas
-              </p>
-            </div>
-            <div class="listado__elemento">
-              <h2 class="listado__heading">Seguro</h2>
-              <p class="listado__texto">
-                Por su tecnologia digital nucleus es imposible de hackear o
-                robar
-              </p>
-            </div>
-            <div class="listado__elemento">
-              <h2 class="listado__heading">Administrable</h2>
-              <p class="listado__texto">
-                Añade o trasfeiere fondos a tu banco, añade limites o controla
-                tus gastos
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+    </nav>
 
-    <section class="seguridad">
-      <div class="seguridad__contenedor">
-        <h2 class="seguridad__heading">Nucleus es seguro</h2>
-        <div class="seguridad__grid">
-          <div class="listado">
-            <div class="listado__elemento">
-              <p class="listado__texto">
-                Nucleus es seguro e imposible de clonar
-              </p>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <span class="hero__badge-pulse"></span>
+            Billetera Digital de Nueva Generación
+          </div>
+          
+          <h1 class="hero__heading">
+            Recibe y Realiza pagos en tu celular con <span class="hero__heading-gradient">Nucleus</span>
+          </h1>
 
-            <div class="listado__elemento">
-              <p class="listado__texto">
-                Utiliza tu cara o tu dedo para confirmar tu deposito o registrar
-                una cuenta
-              </p>
-            </div>
-
-            <div class="listado__elemento">
-              <p class="listado__texto">
-                Paga en un establecimiento con una tarjeta de credito que se
-                desactiva una vez que has hecho tu compra
-              </p>
-            </div>
-          </div>
-
-          <div class="seguridad__imagen">
-            <img src="assets/img/seguridad.png" alt="seguridad nucleus" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="comisiones">
-      <div class="comisiones__contenedor">
-        <h2 class="comisiones__heading">Comisiones</h2>
-        <div class="comisione__grid">
-          <div class="comisiones__contenido">
-            <p class="comisiones__texto">
-              Mientras mas veces utilices nucleus, menos pagas:
-            </p>
-            <div class="listado">
-              <div class="listado__elemento listado__elemento--2col">
-                <p class="listado__numero">3%</p>
-                <p class="listado__texto">
-                  De todas tus transacciones si tus movimientos son menores a
-                  $999 USD.
-                </p>
-              </div>
-
-              <div class="listado__elemento listado__elemento--2col">
-                <p class="listado__numero">2.5%</p>
-                <p class="listado__texto">
-                  De todas tus transacciones si tus movimientos son mayores a
-                  $999 USD.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!--Aqui se cierra comisiones contenido-->
-          <div class="comisiones__imagen">
-            <img src="assets/img/app_3.svg" alt="imagen app" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="testimoniales">
-      <div class="testimoniales__contenedor">
-        <h2 class="testimoniales__heading">Testimoniales</h2>
-        <div class="testomoniales__grid">
-          <div class="testimonial">
-            <p class="textimonial__texto">
-              Excelente app, muy sencillo de manejar y enviar dinero
-            </p>
-            <p class="testimonial__autor">- Jose Perdomo</p>
-          </div>
-          <div class="testimonial">
-            <p class="textimonial__texto">
-              Excelente app, muy sencillo de manejar y enviar dinero
-            </p>
-            <p class="testimonial__autor">- Jose Perdomo</p>
-          </div>
-          <div class="testimonial">
-            <p class="textimonial__texto">
-              Excelente app, muy sencillo de manejar y enviar dinero
-            </p>
-            <p class="testimonial__autor">- Jose Perdomo</p>
-          </div>
-          <div class="testimonial">
-            <p class="textimonial__texto">
-              Excelente app, muy sencillo de manejar y enviar dinero
-            </p>
-            <p class="testimonial__autor">- Jose Perdomo</p>
-          </div>
-          <div class="testimonial">
-            <p class="textimonial__texto">
-              Excelente app, muy sencillo de manejar y enviar dinero
-            </p>
-            <p class="testimonial__autor">- Jose Perdomo</p>
-          </div>
-          <div class="testimonial">
-            <p class="textimonial__texto">
-              Excelente app, muy sencillo de manejar y enviar dinero
-            </p>
-            <p class="testimonial__autor">- Jose Perdomo</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="footer__contenedor">
-        <div class="footer__grid">
-          <div class="footer__logo">
-            <img src="assets/img/logo-blanco.svg" alt="logo footer" />
-          </div>
-          <nav class="navegacion">
-            <a href="#" class="navegacion__link navegacion__link--blanco"
-              >¿Que es?</a
-            >
-            <a href="#" class="navegacion__link navegacion__link--blanco"
-              >¿Como funciona?</a
-            >
-            <a href="#" class="navegacion__link navegacion__link--blanco"
-              >Precios</a
-            >
-            <a href="#" class="navegacion__link navegacion__link--blanco"
-              >Contratar</a
-            >
-          </nav>
-        </div>
-        <div class="autor">
-          <p class="autor_web">
-            Derechos reservados &copy 2022 Desarrollado por Jose Perdomo
+          <p class="hero__description">
+            La plataforma financiera que simplifica tu dinero: transferencias inmediatas en segundos, tarjetas virtuales seguras para compras en línea y las tarifas más bajas del mercado sin letras chicas.
           </p>
+
+          <div class="hero__ctas">
+            <a href="#registro" class="btn btn--primary btn--lg" data-open-modal="signup">
+              Obtener Cuenta Gratis
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#comisiones" class="btn btn--ghost btn--lg">
+              Simular Comisiones
+            </a>
+          </div>
+
+          <div class="hero__trust">
+            <div class="trust-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>+250K Usuarios activos</span>
+            </div>
+            <div class="trust-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>Cifrado Bancario AES-256</span>
+            </div>
+            <div class="trust-item">
+              <span style="color: #f59e0b;">★ 4.9/5</span>
+              <span>App Store & Play Store</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__mockup-wrap">
+            <img src="assets/img/app_1.svg" alt="App Nucleus en smartphone" class="hero__mockup-img" width="273" height="652" />
+
+            <!-- Floating Micro Card Top -->
+            <div class="hero__floating-card hero__floating-card--top">
+              <div class="floating-icon floating-icon--success">✓</div>
+              <div class="floating-info">
+                <span class="floating-title">Transferencia Recibida</span>
+                <span class="floating-subtitle">+$1,250.00 USD • Hace 2 min</span>
+              </div>
+            </div>
+
+            <!-- Floating Micro Card Bottom -->
+            <div class="hero__floating-card hero__floating-card--bottom">
+              <div class="floating-icon floating-icon--primary">💳</div>
+              <div class="floating-info">
+                <span class="floating-title">Tarjeta Virtual Dinámica</span>
+                <span class="floating-subtitle">•••• 8824 • Protegida</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
-  </body>
+    </section>
+  </header>
+
+  <!-- ==========================================================================
+       Metrics Ribbon
+       ========================================================================== -->
+  <section class="metrics-section">
+    <div class="container metrics__grid">
+      <div class="metric-item">
+        <div class="metric-item__value">+250,000</div>
+        <div class="metric-item__label">Usuarios Activos en Latam</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-item__value">$45M+ USD</div>
+        <div class="metric-item__label">Transaccionados Mensualmente</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-item__value">&lt; 3 Seg</div>
+        <div class="metric-item__label">Velocidad Promedio de Envío</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-item__value">99.99%</div>
+        <div class="metric-item__label">Disponibilidad de Servicio</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ¿Qué es Nucleus? (Features)
+       ========================================================================== -->
+  <section class="features-section" id="que-es">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Innovación Financiera</span>
+        <h2 class="section-title">¿Qué es Nucleus y cómo revoluciona tus pagos?</h2>
+        <p class="section-subtitle">
+          Olvídate de las filas bancarias y comisiones abusivas. Nucleus unifica tu dinero digital en una experiencia fluida, transparente y 100% móvil.
+        </p>
+      </div>
+
+      <div class="features__grid">
+        <div class="features__visual">
+          <img src="assets/img/app_2.svg" alt="Interfaz de usuario Nucleus" class="features__mockup-img" width="273" height="652" />
+        </div>
+
+        <div class="features__list">
+          <!-- Feature 1 -->
+          <div class="feature-card">
+            <div class="feature-card__icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <div class="feature-card__content">
+              <h3>Fácil y Sin Papeleo</h3>
+              <p>
+                Crea tu cuenta en menos de 3 minutos, sube tu documento de identidad mediante validación biométrica inteligente y comienza a operar el mismo día sin burocracia.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-card">
+            <div class="feature-card__icon-wrap" style="background: var(--accent-emerald-light); color: var(--accent-emerald);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div class="feature-card__content">
+              <h3>Blindaje y Seguridad Extrema</h3>
+              <p>
+                Respaldada por tokenización de pagos y encriptación de extremo a extremo. Tus credenciales reales nunca son expuestas ante comercios ni intermediarios.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-card">
+            <div class="feature-card__icon-wrap" style="background: var(--accent-cyan-light); color: var(--accent-cyan);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <div class="feature-card__content">
+              <h3>Totalmente Administrable</h3>
+              <p>
+                Conecta tu cuenta bancaria tradicional para transferir fondos al instante, define presupuestos mensuales y recibe reportes analíticos automáticos de tus gastos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Seguridad Arquitectura
+       ========================================================================== -->
+  <section class="security-section" id="seguridad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="background: var(--accent-emerald-light); color: var(--accent-emerald);">Protección de Grado Militar</span>
+        <h2 class="section-title">Nucleus es impenetrable por diseño</h2>
+        <p class="section-subtitle">
+          Implementamos capas de defensa activas que previenen fraude, suplantación y clonación antes de que ocurran.
+        </p>
+      </div>
+
+      <div class="security__grid">
+        <div class="security__cards-grid">
+          <!-- Security 1 -->
+          <div class="security-card">
+            <div class="security-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a10 10 0 0 0-7.07 17.07"></path>
+                <path d="M12 6a6 6 0 0 0-4.24 10.24"></path>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <h4>Biometría Facial & Dactilar</h4>
+            <p>Confirma depósitos, transferencias o retiros utilizando tu rostro o huella dactilar. Imposible de suplantar.</p>
+          </div>
+
+          <!-- Security 2 -->
+          <div class="security-card">
+            <div class="security-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+              </svg>
+            </div>
+            <h4>Tarjetas Descartables</h4>
+            <p>Genera tarjetas virtuales para comprar por internet que se autodestruyen inmediatamente tras el pago.</p>
+          </div>
+
+          <!-- Security 3 -->
+          <div class="security-card">
+            <div class="security-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h4>Cifrado AES-256</h4>
+            <p>Cada paquete de datos viaja protegido bajo los estándares más exigentes de la banca internacional.</p>
+          </div>
+
+          <!-- Security 4 -->
+          <div class="security-card">
+            <div class="security-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+              </svg>
+            </div>
+            <h4>Congelamiento Instantáneo</h4>
+            <p>¿Perdiste tu dispositivo? Pausa todas tus tarjetas y transacciones con un toque desde la web o soporte 24/7.</p>
+          </div>
+        </div>
+
+        <div class="security__visual">
+          <img src="assets/img/seguridad.png" alt="Escudo de seguridad digital Nucleus" class="security__img" width="380" height="380" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Comisiones & Calculadora Interactiva
+       ========================================================================== -->
+  <section class="calculator-section" id="comisiones">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Tarifas Transparentes</span>
+        <h2 class="section-title">Mientras más utilizas Nucleus, menos pagas</h2>
+        <p class="section-subtitle">
+          Sin costos de mantenimiento ocultos ni comisiones sorpresa. Simula tu transferencia en tiempo real y descubre cuánto ahorras.
+        </p>
+      </div>
+
+      <div class="calculator__grid">
+        <!-- Interactive Fee Simulator -->
+        <div class="calculator-card">
+          <div class="calculator-card__input-group">
+            <div class="calculator-card__label-row">
+              <label for="calcInput" class="calculator-card__label">Monto a Enviar o Cobrar</label>
+              <span class="calculator-card__badge-tier" style="font-size: 0.85rem; color: var(--primary); font-weight: 600;">Moneda: USD</span>
+            </div>
+
+            <div class="calculator-card__input-box">
+              <span class="calculator-card__currency">$</span>
+              <input type="number" id="calcInput" class="calculator-card__input" value="500" min="10" max="10000" step="10" />
+            </div>
+
+            <div class="calc-range-wrap">
+              <input type="range" id="calcSlider" class="calc-range" min="10" max="5000" step="25" value="500" aria-label="Ajustar monto de transferencia" />
+            </div>
+
+            <div class="calc-presets">
+              <button type="button" class="calc-preset-btn" data-amount="150">$150 USD</button>
+              <button type="button" class="calc-preset-btn" data-amount="500">$500 USD</button>
+              <button type="button" class="calc-preset-btn" data-amount="1000">$1,000 USD</button>
+              <button type="button" class="calc-preset-btn" data-amount="2500">$2,500 USD</button>
+            </div>
+          </div>
+
+          <div class="calculator-results">
+            <div class="calc-row">
+              <span class="calc-lbl">Tasa de Comisión Nucleus:</span>
+              <span class="calc-val" id="calcFeeRate" style="color: var(--primary); font-weight: 700;">3.0%</span>
+            </div>
+            <div class="calc-row">
+              <span class="calc-lbl">Comisión Total:</span>
+              <span class="calc-val" id="calcFeeAmount" style="font-weight: 700;">$15.00 USD</span>
+            </div>
+            <div class="calc-row calc-row--highlight">
+              <span class="calc-lbl" style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary);">Monto Neto Recibido:</span>
+              <span class="calc-val" id="calcNetAmount">$485.00 USD</span>
+            </div>
+
+            <div class="calc-badge-savings" id="calcBankSavings">
+              ✓ Ahorras ~$27.50 USD frente a transferencias bancarias tradicionales
+            </div>
+          </div>
+
+          <div style="margin-top: 1.75rem;">
+            <a href="#registro" class="btn btn--primary btn--block" data-open-modal="signup">
+              Comenzar a Transferir con Nucleus
+            </a>
+          </div>
+        </div>
+
+        <div class="calculator__visual">
+          <img src="assets/img/app_3.svg" alt="Detalle de comisiones en app Nucleus" class="calculator__img" width="273" height="652" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Planes Transparentes (Pricing)
+       ========================================================================== -->
+  <section class="pricing-section" id="planes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Planes a tu Medida</span>
+        <h2 class="section-title">Elige el plan ideal para tu estilo de vida</h2>
+        <p class="section-subtitle">
+          Desde pagos cotidianos hasta operaciones de negocios internacionales. Sin compromisos forzosos.
+        </p>
+      </div>
+
+      <div class="pricing-toggle-wrap">
+        <span class="pricing-toggle-label">Mensual</span>
+        <label class="switch" aria-label="Cambiar entre cobro mensual y anual">
+          <input type="checkbox" id="billingToggle" />
+          <span class="slider-switch"></span>
+        </label>
+        <span class="pricing-toggle-label">Anual</span>
+        <span class="pricing-badge-discount">Ahorra 20%</span>
+      </div>
+
+      <div class="pricing__grid">
+        <!-- Plan 1 -->
+        <div class="plan-card">
+          <div class="plan-card__header">
+            <h3 class="plan-card__name">Básico</h3>
+            <p class="plan-card__desc">Ideal para transferir dinero con amigos y familiares en tu país.</p>
+          </div>
+          <div class="plan-card__price-box">
+            <span class="plan-card__currency">$</span>
+            <span class="plan-card__price-value" data-monthly="0" data-annual="0">0</span>
+            <span class="plan-card__period">/mes de por vida</span>
+          </div>
+          <ul class="plan-card__features">
+            <li class="plan-card__feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Transferencias locales sin costo</span>
+            </li>
+            <li class="plan-card__feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>1 Tarjeta virtual para compras online</span>
+            </li>
+            <li class="plan-card__feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Soporte por chat en horario hábil</span>
+            </li>
+            <li class="plan-card__feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Notificaciones de compras en tiempo real</span>
+            </li>
+          </ul>
+          <a href="#registro" class="btn btn--ghost btn--block" data-open-modal="signup">Registrarse Gratis</a>
+        </div>
+
+        <!-- Plan 2 (Featured) -->
+        <div class="plan-card plan-card--featured">
+          <span class="plan-card__ribbon">Más Popular</span>
+          <div class="plan-card__header">
+            <h3 class="plan-card__name">Pro Global</h3>
+            <p class="plan-card__desc">Para nómadas digitales, freelancers y compras internacionales.</p>
+          </div>
+          <div class="plan-card__price-box">
+            <span class="plan-card__currency">$</span>
+            <span class="plan-card__price-value" data-monthly="4.99" data-annual="3.99">4.99</span>
+            <span class="plan-card__period">/mes</span>
+          </div>
+          <ul class="plan-card__features">
+            <li class="plan-card__feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Tarjetas virtuales descartables ilimitadas</span>
+            </li>
+            <li class="plan-card__feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>1.5% Cashback en todas tus compras</span>
+            </li>
+            <li class="plan-card__feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Comisión reducida al 2.5% fija</span>
+            </li>
+            <li class="plan-card__feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Soporte prioritario 24/7 en español</span>
+            </li>
+          </ul>
+          <a href="#registro" class="btn btn--primary btn--block" data-open-modal="signup">Prueba 30 Días Gratis</a>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="plan-card">
+          <div class="plan-card__header">
+            <h3 class="plan-card__name">Business</h3>
+            <p class="plan-card__desc">Para empresas, comercios y equipos con alto volumen.</p>
+          </div>
+          <div class="plan-card__price-box">
+            <span class="plan-card__currency">$</span>
+            <span class="plan-card__price-value" data-monthly="14.99" data-annual="11.99">14.99</span>
+            <span class="plan-card__period">/mes</span>
+          </div>
+          <ul class="plan-card__features">
+            <li class="plan-card__feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>API de cobros y payouts masivos</span>
+            </li>
+            <li class="plan-card__feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Cuentas para hasta 10 colaboradores</span>
+            </li>
+            <li class="plan-card__feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Facturación y conciliación automática</span>
+            </li>
+            <li class="plan-card__feature-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Gerente de cuenta corporativo dedicado</span>
+            </li>
+          </ul>
+          <a href="#registro" class="btn btn--ghost btn--block" data-open-modal="signup">Contactar Ventas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Testimoniales Reales & Diversificados
+       ========================================================================== -->
+  <section class="testimonials-section" id="testimoniales">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Historias de Usuarios</span>
+        <h2 class="section-title">Lo que dicen quienes ya confían en Nucleus</h2>
+        <p class="section-subtitle">
+          Miles de profesionales y emprendedores gestionan sus pagos internacionales con total tranquilidad.
+        </p>
+      </div>
+
+      <div class="testimonials__grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__quote">
+              "Trabajo como freelancer para clientes en EE.UU. y Europa. Con Nucleus recibo mis honorarios en minutos y los retiro a mi cuenta bancaria local con una fracción del costo tradicional."
+            </p>
+          </div>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--primary);">CM</div>
+            <div class="testimonial-card__author-info">
+              <h4>Carlos Mendoza</h4>
+              <p>Diseñador UI/UX Freelance</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__quote">
+              "Las tarjetas descartables son una genialidad. Compro en tiendas online de todo el mundo sin temor a que clonen mi tarjeta principal. La seguridad es simplemente inmejorable."
+            </p>
+          </div>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent-emerald);">VR</div>
+            <div class="testimonial-card__author-info">
+              <h4>Valentina Rossi</h4>
+              <p>Emprendedora E-commerce</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__quote">
+              "La interfaz es súper limpia y reactiva. Puedo ver en tiempo real cada transacción y los presupuestos por categoría me han ayudado a ahorrar más de un 20% mensual."
+            </p>
+          </div>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent-cyan);">AG</div>
+            <div class="testimonial-card__author-info">
+              <h4>Andrés Gómez</h4>
+              <p>Desarrollador de Software</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+          <div>
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__quote">
+              "Para nuestro estudio de consultoría, gestionar pagos de proveedores en el extranjero era un dolor de cabeza bancario. Nucleus nos resolvió la vida en un par de clics."
+            </p>
+          </div>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar" style="display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--primary);">SV</div>
+            <div class="testimonial-card__author-info">
+              <h4>Sofía Villalobos</h4>
+              <p>Consultora Financiera</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Preguntas Frecuentes (FAQ)
+       ========================================================================== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Resolvemos tus Dudas</span>
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <p class="section-subtitle">
+          Todo lo que necesitas saber antes de comenzar a operar con Nucleus.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>¿Qué requisitos necesito para abrir una cuenta en Nucleus?</span>
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>
+              Solo necesitas ser mayor de 18 años, contar con un documento de identidad oficial vigente (cédula o pasaporte) y un smartphone con conexión a internet para la verificación biométrica inicial.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>¿Cómo funcionan las tarjetas virtuales descartables?</span>
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>
+              Desde la aplicación puedes crear un número de tarjeta virtual único con fecha de expiración y CVV dinámico. Una vez que realizas el pago en un sitio web, esa tarjeta queda inhabilitada automáticamente, haciendo imposible que te clonen o hagan cobros indebidos.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>¿Puedo retirar fondos directamente a mi cuenta bancaria local?</span>
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>
+              Sí. Nucleus cuenta con convenios de integración interbancaria instantánea en más de 14 países de América Latina y Norteamérica. Tus retiros se acreditan en tu cuenta bancaria local en cuestión de minutos.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-item__question" aria-expanded="false">
+            <span>¿Existen costos fijos o comisiones por inactividad?</span>
+            <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="faq-item__answer">
+            <p>
+              No, en absoluto. El plan Básico no cobra comisiones de apertura, saldo mínimo mensual ni cargos por inactividad. Solo pagas las comisiones transparentes por transacción de cobro o envío internacional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CTA Banner Section
+       ========================================================================== -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Toma el control inteligente de tu dinero hoy</h2>
+        <p>Únete a más de 250,000 personas y empresas que pagan, transfieren y ahorran con la tecnología más segura de la región.</p>
+        <a href="#registro" class="btn btn--primary btn--lg" data-open-modal="signup">
+          Crear Cuenta Gratuita en 3 Minutos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer Moderno
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/img/logo.svg" alt="Logo Nucleus" width="130" height="35" />
+          <p>La billetera digital eWallet de próxima generación para pagos locales y transferencias internacionales seguras.</p>
+          <div class="footer__status">
+            <span>●</span> Todos los sistemas operativos y protegidos
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <h4>Producto</h4>
+          <ul class="footer__links">
+            <li><a href="#que-es">¿Cómo funciona?</a></li>
+            <li><a href="#seguridad">Seguridad biométrica</a></li>
+            <li><a href="#comisiones">Calculadora de tarifas</a></li>
+            <li><a href="#planes">Planes para personas</a></li>
+            <li><a href="#planes">Cuentas corporativas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h4>Recursos</h4>
+          <ul class="footer__links">
+            <li><a href="#faq">Centro de Ayuda</a></li>
+            <li><a href="#seguridad">Guía de Seguridad</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+            <li><a href="#testimoniales">Casos de éxito</a></li>
+            <li><a href="#">API para desarrolladores</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h4>Legal & Contacto</h4>
+          <ul class="footer__links">
+            <li><a href="#">Términos del Servicio</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Cumplimiento Regulatorio</a></li>
+            <li><a href="#">Soporte 24/7</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 <strong>Nucleus eWallet</strong>. Desarrollado por <a href="https://github.com/josmperdomo" target="_blank" rel="noopener noreferrer">Jose Manuel Perdomo</a>. Todos los derechos reservados.</p>
+        <div style="display:flex;gap:1.5rem;">
+          <a href="#inicio" style="color:var(--text-muted);font-size:0.85rem;">Volver arriba ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Modal de Registro Rápido
+       ========================================================================== -->
+  <div class="modal" id="signupModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal__dialog">
+      <button class="modal__close" id="closeModalBtn" aria-label="Cerrar modal">&times;</button>
+      
+      <div class="modal__header">
+        <h3 class="modal__title" id="modalTitle">Comienza con Nucleus</h3>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">Crea tu billetera digital en menos de 3 minutos</p>
+      </div>
+
+      <form id="signupForm">
+        <div class="form-group">
+          <label for="userName" class="form-label">Nombre Completo</label>
+          <input type="text" id="userName" class="form-control" placeholder="Ej. Juan Pérez" required />
+        </div>
+
+        <div class="form-group">
+          <label for="userEmail" class="form-label">Correo Electrónico</label>
+          <input type="email" id="userEmail" class="form-control" placeholder="juan@ejemplo.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="accountType" class="form-label">Tipo de Cuenta</label>
+          <select id="accountType" class="form-control">
+            <option value="personal">Cuenta Personal (Plan Básico Gratuito)</option>
+            <option value="pro">Cuenta Pro Global ($4.99/mes)</option>
+            <option value="business">Cuenta Business para Empresas</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="margin-top: 1.5rem;">
+          <button type="submit" class="btn btn--primary btn--block btn--lg">
+            Crear Mi Cuenta Gratis
+          </button>
+        </div>
+
+        <p style="text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem;">
+          Al registrarte aceptas los Términos de Servicio y la Política de Privacidad de Nucleus.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/app.js"></script>
+</body>
 </html>
