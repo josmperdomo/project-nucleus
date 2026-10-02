@@ -10,14 +10,14 @@
   <meta name="keywords" content="nucleus, ewallet, billetera digital, pagos moviles, fintech, transferencias internacionales, tarjetas virtuales" />
   <meta name="author" content="Jose Manuel Perdomo" />
 
-  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <!-- Google Fonts: Outfit, Plus Jakarta Sans & Poppins (for SVG UI elements) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- CSS Stylesheets -->
+  <!-- CSS Stylesheets (with cache buster) -->
   <link rel="stylesheet" href="assets/css/normalize.css" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=4" />
 </head>
 <body>
 
@@ -110,27 +110,34 @@
           </div>
         </div>
 
-        <!-- Hero Visual Showcase with Luxury Smartphone Chassis -->
+        <!-- Hero Visual Showcase with Ultra-Realistic Smartphone Display -->
         <div class="hero__visual">
-          <div class="phone-mockup-chassis">
-            <div class="phone-screen">
-              <img src="assets/img/app_1.svg" alt="App Nucleus en smartphone" width="273" height="652" />
-            </div>
-
-            <!-- Floating Status Pills Placed Tactfully Outside Screen -->
-            <div class="floating-status-pill floating-status-pill--top">
-              <div class="pill-icon pill-icon--success">✓</div>
-              <div class="pill-text">
-                <span class="pill-title">Transferencia Recibida</span>
-                <span class="pill-desc">+$1,250.00 USD • Hace 2 min</span>
+          <div class="phone-showcase">
+            <div class="phone-device">
+              <div class="phone-screen">
+                <div class="phone-island">
+                  <span class="phone-island-camera"></span>
+                </div>
+                <div class="phone-glare"></div>
+                <img src="assets/img/app_1.svg" alt="App Nucleus en smartphone" class="phone-img" width="273" height="591" />
+                <div class="phone-home-indicator"></div>
               </div>
             </div>
 
-            <div class="floating-status-pill floating-status-pill--bottom">
-              <div class="pill-icon pill-icon--blue">💳</div>
-              <div class="pill-text">
-                <span class="pill-title">Tarjeta Virtual Dinámica</span>
-                <span class="pill-desc">•••• 8824 • Protegida</span>
+            <!-- Flanking Floating Badges - Completely Outside Screen -->
+            <div class="floating-badge floating-badge--top">
+              <div class="badge-icon badge-icon--success">✓</div>
+              <div class="badge-text">
+                <span class="badge-title">Transferencia Recibida</span>
+                <span class="badge-desc">+$1,250.00 USD • Inmediato</span>
+              </div>
+            </div>
+
+            <div class="floating-badge floating-badge--bottom">
+              <div class="badge-icon badge-icon--blue">💳</div>
+              <div class="badge-text">
+                <span class="badge-title">Tarjeta Virtual Dinámica</span>
+                <span class="badge-desc">•••• 8824 • Protegida</span>
               </div>
             </div>
           </div>
@@ -141,7 +148,7 @@
 
   <!-- ==========================================================================
        Metrics Ribbon
-       ========================================================================== -->
+       ========================================================================= -->
   <section class="metrics-section">
     <div class="container metrics__grid">
       <div class="metric-item">
@@ -178,9 +185,16 @@
 
       <div class="features__grid">
         <div class="features__visual">
-          <div class="phone-mockup-chassis" style="max-width: 290px;">
-            <div class="phone-screen">
-              <img src="assets/img/app_2.svg" alt="Interfaz de usuario Nucleus" width="273" height="652" />
+          <div class="phone-showcase" style="max-width: 295px;">
+            <div class="phone-device">
+              <div class="phone-screen">
+                <div class="phone-island">
+                  <span class="phone-island-camera"></span>
+                </div>
+                <div class="phone-glare"></div>
+                <img src="assets/img/app_2.svg" alt="Pantalla de pagos y transferencias en Nucleus" class="phone-img" width="273" height="591" />
+                <div class="phone-home-indicator"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -375,9 +389,16 @@
         </div>
 
         <div class="calculator__visual">
-          <div class="phone-mockup-chassis" style="max-width: 290px;">
-            <div class="phone-screen">
-              <img src="assets/img/app_3.svg" alt="Detalle de comisiones en app Nucleus" width="273" height="652" />
+          <div class="phone-showcase" style="max-width: 295px;">
+            <div class="phone-device">
+              <div class="phone-screen">
+                <div class="phone-island">
+                  <span class="phone-island-camera"></span>
+                </div>
+                <div class="phone-glare"></div>
+                <img src="assets/img/app_3.svg" alt="Analítica de gastos mensuales en Nucleus" class="phone-img" width="273" height="390" />
+                <div class="phone-home-indicator"></div>
+              </div>
             </div>
           </div>
         </div>

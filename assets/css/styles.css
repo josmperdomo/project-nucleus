@@ -1,7 +1,7 @@
 /* ==========================================================================
    NUCLEUS eWallet - Elite Design System
    Theme: High-End Modern Fintech (Blue Gradient Palette)
-   Typography: Outfit (Headings) + Plus Jakarta Sans (Body)
+   Typography: Outfit (Headings) + Plus Jakarta Sans (Body) + Poppins (SVG Elements)
    ========================================================================== */
 
 :root {
@@ -10,7 +10,7 @@
   --blue-100: #e0effe;
   --blue-200: #bae0fd;
   --blue-300: #7cc7fb;
-  --blue-400: #38adf8;
+  --blue-400: #38bdf8;
   --blue-500: #0ea5e9;
   --blue-600: #0284c7;
   --blue-700: #2563eb;
@@ -29,7 +29,7 @@
   --bg-main: #f8fafc;
   --bg-surface: #ffffff;
   --bg-subtle: #f1f5f9;
-  --bg-glass: rgba(255, 255, 255, 0.92);
+  --bg-glass: rgba(255, 255, 255, 0.94);
 
   --text-primary: #0f172a;
   --text-secondary: #475569;
@@ -51,7 +51,7 @@
   --shadow-lg: 0 12px 28px -4px rgba(37, 99, 235, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
   --shadow-xl: 0 24px 48px -12px rgba(37, 99, 235, 0.18), 0 8px 16px -4px rgba(15, 23, 42, 0.06);
   --shadow-btn: 0 8px 20px -4px rgba(37, 99, 235, 0.45);
-  --shadow-mockup: 0 30px 60px -15px rgba(15, 23, 42, 0.25), 0 0 0 1px rgba(226, 232, 240, 0.8);
+  --shadow-device: 0 25px 50px -12px rgba(15, 23, 42, 0.25), 0 10px 25px -5px rgba(37, 99, 235, 0.12);
 
   /* Typography */
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -118,6 +118,11 @@ img, svg {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/* Override SVG internal font to guarantee clean modern sans-serif rendering */
+svg text {
+  font-family: 'Poppins', 'Plus Jakarta Sans', sans-serif !important;
 }
 
 /* Container */
@@ -298,7 +303,7 @@ img, svg {
   font-weight: 500;
   color: var(--text-secondary);
   transition: color var(--transition-fast);
-  white-space: nowrap; /* Prevents text wrap like '¿Qué es?' */
+  white-space: nowrap;
   position: relative;
   display: inline-block;
   padding: 0.25rem 0;
@@ -332,7 +337,7 @@ img, svg {
 }
 
 .nav__actions--mobile {
-  display: none !important; /* Never display in desktop list */
+  display: none !important;
 }
 
 .nav__toggle {
@@ -392,7 +397,7 @@ img, svg {
 }
 
 /* ==========================================================================
-   Hero Section - Clean 50/50 Layout
+   Hero Section
    ========================================================================== */
 .hero {
   padding: 8.5rem 0 4.5rem 0;
@@ -501,101 +506,191 @@ img, svg {
 }
 
 /* ==========================================================================
-   Smartphone Device Chassis (Clean Mockup Frame)
+   Realistic Smartphone Mockup System (High-End Titanium Device)
    ========================================================================== */
 .hero__visual {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-.phone-mockup-chassis {
+.phone-showcase {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 295px;
+  margin: 0 auto;
+}
+
+/* Outer Titanium Smartphone Chassis */
+.phone-device {
   position: relative;
   width: 100%;
-  max-width: 310px;
-  background: #0f172a;
-  border-radius: 44px;
+  background: linear-gradient(165deg, #2b3345 0%, #151b27 35%, #0e121a 100%);
+  border-radius: 46px;
   padding: 10px;
-  box-shadow: 0 25px 60px -15px rgba(37, 99, 235, 0.25),
-              0 10px 25px -5px rgba(15, 23, 42, 0.15),
-              0 0 0 1px rgba(255, 255, 255, 0.12) inset;
-  transition: transform var(--transition-bounce);
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+    0 0 0 2px rgba(15, 20, 28, 0.95),
+    0 4px 8px rgba(0, 0, 0, 0.35),
+    0 24px 50px -10px rgba(15, 23, 42, 0.38),
+    0 10px 30px -5px rgba(37, 99, 235, 0.18);
+  transition: transform var(--transition-bounce), box-shadow var(--transition-normal);
 }
 
-.phone-mockup-chassis:hover {
+.phone-device:hover {
   transform: translateY(-6px);
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.28) inset,
+    0 0 0 2px rgba(15, 20, 28, 0.95),
+    0 8px 16px rgba(0, 0, 0, 0.4),
+    0 32px 64px -10px rgba(15, 23, 42, 0.45),
+    0 16px 36px -5px rgba(37, 99, 235, 0.28);
 }
 
-/* Dynamic Island pill */
-.phone-mockup-chassis::before {
+/* Side Hardware Buttons (Left: Volume; Right: Power) */
+.phone-device::before {
   content: '';
   position: absolute;
-  top: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 18px;
-  background: #000000;
-  border-radius: var(--radius-full);
-  z-index: 10;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  left: -3px;
+  top: 90px;
+  width: 3px;
+  height: 46px;
+  background: linear-gradient(to bottom, #3b465c, #1f2737);
+  border-radius: 3px 0 0 3px;
+  box-shadow: 0 54px 0 0 #283244;
 }
 
+.phone-device::after {
+  content: '';
+  position: absolute;
+  right: -3px;
+  top: 105px;
+  width: 3px;
+  height: 58px;
+  background: linear-gradient(to bottom, #3b465c, #1f2737);
+  border-radius: 0 3px 3px 0;
+}
+
+/* Inner OLED Display Screen */
 .phone-screen {
   position: relative;
-  width: 100%;
-  border-radius: 34px;
+  border-radius: 36px;
   overflow: hidden;
-  background: #0b0f19;
-  aspect-ratio: 272.7 / 590;
+  background: #0f0f1e;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8) inset;
+}
+
+/* Top Dynamic Island */
+.phone-island {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78px;
+  height: 18px;
+  background: #000000;
+  border-radius: 20px;
+  z-index: 20;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-right: 6px;
+  pointer-events: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-.phone-screen img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
+.phone-island-camera {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0d1527;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  display: inline-block;
 }
 
-/* Flanking Micro Cards - Positioned outside phone screen */
-.floating-status-pill {
+/* Screen Glass Sheen Overlay */
+.phone-glare {
   position: absolute;
-  background: rgba(255, 255, 255, 0.95);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(130deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.015) 30%, transparent 50%);
+  pointer-events: none;
+  z-index: 10;
+  border-radius: 36px;
+}
+
+/* Bottom iOS Gesture Home Indicator */
+.phone-home-indicator {
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 105px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 10px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+/* App SVG graphic inside screen */
+.phone-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Flanking Floating Badges - Positioned gracefully outside screen elements */
+.floating-badge {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.95);
   border-radius: var(--radius-md);
-  padding: 0.75rem 1rem;
-  box-shadow: var(--shadow-lg);
+  padding: 0.7rem 1.05rem;
+  box-shadow: 0 14px 30px -4px rgba(15, 23, 42, 0.14), 0 4px 10px rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  z-index: 20;
-  animation: subtle-float 4s ease-in-out infinite alternate;
+  z-index: 30;
+  white-space: nowrap;
 }
 
-.floating-status-pill--top {
-  top: 8%;
-  right: -25px;
+.floating-badge--top {
+  top: -15px;
+  right: -55px;
+  animation: float-badge-1 4s ease-in-out infinite alternate;
 }
 
-.floating-status-pill--bottom {
-  bottom: 8%;
-  left: -25px;
-  animation-delay: 2s;
+.floating-badge--bottom {
+  bottom: 20px;
+  left: -80px;
+  animation: float-badge-2 4s ease-in-out infinite alternate 1.8s;
 }
 
-@keyframes subtle-float {
+@keyframes float-badge-1 {
   0% { transform: translateY(0px); }
   100% { transform: translateY(-8px); }
 }
 
-.pill-icon {
+@keyframes float-badge-2 {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(8px); }
+}
+
+.badge-icon {
   width: 36px;
   height: 36px;
   border-radius: var(--radius-sm);
@@ -607,35 +702,46 @@ img, svg {
   flex-shrink: 0;
 }
 
-.pill-icon--success {
+.badge-icon--success {
   background: var(--accent-emerald-light);
   color: var(--accent-emerald);
 }
 
-.pill-icon--blue {
+.badge-icon--blue {
   background: var(--blue-50);
   color: var(--blue-700);
 }
 
-.pill-text {
+.badge-text {
   display: flex;
   flex-direction: column;
 }
 
-.pill-title {
-  font-size: 0.82rem;
+.badge-title {
+  font-size: 0.84rem;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.2;
 }
 
-.pill-desc {
+.badge-desc {
   font-size: 0.72rem;
   color: var(--text-muted);
 }
 
-@media (max-width: 600px) {
-  .floating-status-pill {
+@media (max-width: 1200px) {
+  .floating-badge--top {
+    right: -25px;
+    top: -10px;
+  }
+  .floating-badge--bottom {
+    left: -25px;
+    bottom: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-badge {
     display: none;
   }
 }
